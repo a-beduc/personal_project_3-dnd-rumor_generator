@@ -1,6 +1,5 @@
+from src.rumor_extractor import CsvExtractor
 import os
-from src.extractor import CsvExtractor
-
 
 def main():
     data_directory = os.path.join("data", "general_rumor.csv")
@@ -11,7 +10,7 @@ def main():
     #       f"Title: {rumor.rumor_title},\n")
 
     print(extractor.rumors)
-    rumor_a001 = extractor.get_rumor_by_id(rumor_id="A033")
+    rumor_a001 = extractor.get_rumor_by_id(rumor_id="A03")
 
     print(rumor_a001.rumor_title)
 
