@@ -32,7 +32,8 @@ class GUI:
         self.create_widget()
 
     def create_widget(self):
-        self.rumor_title = tk.Label(self.frame, text="", font=("Helvetica", 15), width=40, height=2, anchor="w", padx=10)
+        self.rumor_title = tk.Label(self.frame, text="", font=("Helvetica", 15), width=40, height=2, anchor="w",
+                                    padx=10)
         self.rumor_title.grid(column=0, row=0, columnspan=1, sticky="nsew")
 
         self.rumor_id = tk.Label(self.frame, text="", font=("Helvetica", 10), width=20, height=1, anchor="e", padx=10)
@@ -57,6 +58,12 @@ class GUI:
 
     def next_action(self):
         self.update_rumor()
+
+
+def start_gui(data_directory):
+    root = tk.Tk()
+    GUI(root, init_file_path=data_directory)
+    root.mainloop()
 
 
 def main():
