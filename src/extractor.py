@@ -1,5 +1,7 @@
 import csv
 from typing import Optional, Dict
+import random
+import os
 
 
 class Rumor:
@@ -23,10 +25,29 @@ class Rumor:
         return f"{self.rumor_title}\n"
 
 
-class CsvExtractor:
-    def __init__(self, init_file_path: Optional[str] = None):
+class RumorMemory:
+    def __init__(self, init_file: Optional[str] = None):
+        self.memory: Dict[str, Rumor] = {}
+
+    def load_memory(self):
+        pass
+
+    def add_to_memory(self):
+        pass
+
+    def save_memory(self):
+        pass
+
+    def __repr__(self) -> str:
+        pass
+
+
+class RumorGenerator:
+    def __init__(self, init_file_path: Optional[str] = None, current_memory=None):
         self.init_file_path = init_file_path
         self.rumors: Dict[str, Rumor] = self.init_rumors()
+        self.rumor_memory: RumorMemory = RumorMemory()
+        self.current_memory = current_memory
 
     def init_rumors(self) -> Dict[str, Rumor]:
         rumors: Dict[str, Rumor] = {}
@@ -58,14 +79,31 @@ class CsvExtractor:
             return rumors
 
     def get_rumor_by_id(self, rumor_id: str) -> Optional[Rumor]:
-        try:
-            return self.rumors[rumor_id]
-        except KeyError:
-            print(f"The key {rumor_id} doesn't exist.")
-            return None
-        except AttributeError:
-            print(f"The key {rumor_id} doesn't exist.")
-            return None
-        except TypeError:
-            print(f"The key {rumor_id} doesn't exist.")
-            return None
+        return self.rumors[rumor_id]
+
+    def get_random_rumor(self) -> Rumor:
+        return self.get_rumor_by_id(random.choice(list(self.rumors.keys())))
+
+
+def main():
+    data_directory = os.path.join(os.path.dirname(__file__), "..", "data", "general_rumor.csv")
+    extractor = RumorGenerator(init_file_path=data_directory)
+    # for rumor_id, rumor in extractor.rumors.items():
+    # print(f"ID_key: {rumor_id},\n "
+    #       f"ID_Obj: {rumor.rumor_id},\n"
+    #       f"Title: {rumor.rumor_title},\n")
+
+    # print(extractor.rumors)
+    rumor_a001 = extractor.get_rumor_by_id(rumor_id="A003")
+    print(rumor_a001)
+    rumor_a002 = extractor.get_rumor_by_id(rumor_id="A002")
+    print(rumor_a002.rumor_id)
+    print("------")
+    random_rumorx = extractor.get_random_rumor()
+    print(random_rumorx.rumor_id)
+    print(random_rumorx.rumor_title)
+    print(random_rumorx.rumor_text)
+
+
+if __name__ == "__main__":
+    main()
