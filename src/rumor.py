@@ -1,10 +1,11 @@
 import csv
 from typing import Optional, Dict, List
 import random
-import os
 
 
 class Rumor:
+    """Class that represent object rumor, and its content str(id / subject / title / text)
+        and tags boolean(boi, hou, bre, bry, din, kon, hav, tar, ter, dou)"""
     def __init__(self):
         self.rumor_id: Optional[str] = None
         self.rumor_subject: Optional[str] = None
@@ -26,21 +27,26 @@ class Rumor:
 
 
 class RumorMemory:
+    """Class that handle, the archived rumor so that a rumor doesn't come up more than once to the players"""
     def __init__(self, init_file: Optional[str] = None):
         self.memory: List[str] = []
         self.save_file = init_file
         self.load_memory()
 
     def load_memory(self):
+        """Method to extracts rumors ID found in the file memory.csv and add them to the active memory of the program"""
         with open(self.save_file, "r", encoding="utf-8") as csv_file:
             csv_data = csv.reader(csv_file, delimiter=",")
             for row in csv_data:
                 self.memory.append(row[0])
 
     def add_to_memory(self, rumor_key):
+        """Method to add a rumor to the active memory of the program"""
         self.memory.append(rumor_key)
 
     def save_memory(self):
+        """Method to save rumors ID found in the active memory to the memory.csv file ;
+            it deletes the content of the file memory.csv and replace it with the active memory"""
         with open(self.save_file, "w", encoding="utf-8", newline="") as csv_file:
             csv_writer = csv.writer(csv_file)
             for elem in self.memory:
@@ -51,7 +57,13 @@ class RumorMemory:
 
 
 class RumorGenerator:
+    """Class is a composition of Class Rumor, RumorMemory and its own methods.
+        Mainly it contains a dictionary where Key = rumor_ID and Value = Rumor
+        It also serves the purpose of initializing the rumors from a csv file
+        and presenting a random rumor from the dictionary"""
     def __init__(self, init_file_path: Optional[str] = None, memory_file_path=None):
+        """ Attribute of the class, the order of initialization is important
+            since self.rumors call self.rumor_memory"""
         self.init_file_path = init_file_path
         self.memory_file_path = memory_file_path
         self.rumor_memory: RumorMemory = RumorMemory(self.memory_file_path)
@@ -59,6 +71,8 @@ class RumorGenerator:
         self.current_rumor = None
 
     def init_rumors(self) -> Dict[str, Rumor]:
+        """ This method initialize the rumors from a csv file
+            It also remove rumors from the rumors dictionary if the rumor_Id is found in the memory.csv"""
         rumors: Dict[str, Rumor] = {}
         with open(self.init_file_path, "r", encoding="utf-8") as csvfile:
             csv_data = csv.reader(csvfile, delimiter=",")
@@ -85,15 +99,19 @@ class RumorGenerator:
         return rumors
 
     def remove_saved_rumors(self, rumors):
+        """ This method remove a rumor from the rumors dictionary if its key is in the list rumor_memory"""
         for rumor_key in self.rumor_memory.memory:
             if rumor_key in rumors:
                 rumors.pop(rumor_key)
 
     def update_memory(self):
+        """ This method add the current_rumor ID to the list of rumor_memory"""
         self.rumor_memory.add_to_memory(self.current_rumor.rumor_id)
 
     def get_rumor_by_id(self, rumor_id: str) -> Optional[Rumor]:
+        """ This method return the Value : object Rumor with the specified Key : rumor_ID"""
         return self.rumors[rumor_id]
 
     def get_random_rumor(self) -> Rumor:
+        """ This method change the attribute of the current_rumor to a random rumor from the rumors dictionary"""
         self.current_rumor = self.get_rumor_by_id(random.choice(list(self.rumors.keys())))
