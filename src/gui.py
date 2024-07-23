@@ -1,9 +1,9 @@
 import tkinter as tk
-from src.extractor import RumorGenerator
-import os
+from src.rumor import RumorGenerator
 
 
 class GUI:
+    """ Class that contains the GUI"""
     def __init__(self, root, init_file_path=None, memory_file_path=None):
         self.root = root
         self.root.configure(bg='#2b2d30')
@@ -33,6 +33,7 @@ class GUI:
         self.create_widget()
 
     def create_widget(self):
+        """Method to create the widget ; initialize its values to nothing"""
         self.rumor_title = tk.Label(self.frame, text="", font=("Helvetica", 15), width=40, height=2, anchor="w",
                                     padx=10)
         self.rumor_title.grid(column=0, row=0, columnspan=2, sticky="nsew")
@@ -57,6 +58,7 @@ class GUI:
         next_button.grid(column=2, row=2, sticky="nsew")
 
     def update_rumor(self):
+        """Method to get a new rumor and update the content of the widgets"""
         self.rumors.get_random_rumor()
         current_rumor = self.rumors.current_rumor
         self.rumor_title.config(text=str(current_rumor.rumor_title))
@@ -64,13 +66,17 @@ class GUI:
         self.rumor_text.config(text=str(current_rumor.rumor_text))
 
     def archive_memory(self):
+        """Method to add the current rumor_id to the active memory"""
         self.rumors.update_memory()
 
     def save_memory(self):
+        """Method to write the active memory in the memory.csv file and allows it to be saved
+            from one session to the next"""
         self.rumors.rumor_memory.save_memory()
 
 
 def start_gui(data_directory, memory_file):
+    """Function to start the app"""
     root = tk.Tk()
     GUI(root, init_file_path=data_directory, memory_file_path=memory_file)
     root.mainloop()
