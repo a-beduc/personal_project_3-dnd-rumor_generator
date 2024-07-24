@@ -11,16 +11,18 @@ class Rumor:
         self.rumor_subject: Optional[str] = None
         self.rumor_title: Optional[str] = None
         self.rumor_text: Optional[str] = None
-        self.tag_boi: Optional[str] = None
-        self.tag_hou: Optional[str] = None
-        self.tag_bre: Optional[str] = None
-        self.tag_bry: Optional[str] = None
-        self.tag_din: Optional[str] = None
-        self.tag_kon: Optional[str] = None
-        self.tag_hav: Optional[str] = None
-        self.tag_tar: Optional[str] = None
-        self.tag_ter: Optional[str] = None
-        self.tag_dou: Optional[str] = None
+        self.tags: Dict[str, bool] = {
+            "tag_boi": True,
+            "tag_hou": True,
+            "tag_bre": True,
+            "tag_bry": True,
+            "tag_din": True,
+            "tag_kon": True,
+            "tag_hav": True,
+            "tag_tar": True,
+            "tag_ter": True,
+            "tag_dou": True,
+        }
 
     def __repr__(self) -> str:
         return f"{self.rumor_title}\n"
