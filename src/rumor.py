@@ -36,7 +36,8 @@ class RumorMemory:
         self.load_memory()
 
     def load_memory(self):
-        """Method to extracts rumors ID found in the file memory.csv and add them to the active memory of the program"""
+        """Method to extracts rumors ID found in the file memory_rumor.csv and add them to the active memory of the
+        program"""
         with open(self.save_file, "r", encoding="utf-8") as csv_file:
             csv_data = csv.reader(csv_file, delimiter=",")
             for row in csv_data:
@@ -47,8 +48,8 @@ class RumorMemory:
         self.memory.append(rumor_key)
 
     def save_memory(self):
-        """Method to save rumors ID found in the active memory to the memory.csv file ;
-            it deletes the content of the file memory.csv and replace it with the active memory"""
+        """Method to save rumors ID found in the active memory to the memory_rumor.csv file ;
+            it deletes the content of the file memory_rumor.csv and replace it with the active memory"""
         with open(self.save_file, "w", encoding="utf-8", newline="") as csv_file:
             csv_writer = csv.writer(csv_file)
             for elem in self.memory:
@@ -75,7 +76,7 @@ class RumorGenerator:
 
     def init_rumors(self) -> Dict[str, Rumor]:
         """ This method initialize the rumors from a csv file
-            It also remove rumors from the rumors dictionary if the rumor_Id is found in the memory.csv"""
+            It also remove rumors from the rumors dictionary if the rumor_Id is found in the memory_rumor.csv"""
         rumors: Dict[str, Rumor] = {}
         with open(self.init_file_path, "r", encoding="utf-8") as csvfile:
             csv_data = csv.reader(csvfile, delimiter=",")
