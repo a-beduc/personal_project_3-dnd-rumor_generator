@@ -1,0 +1,88 @@
+category,subcategory,item,coût base,coût valbise,coût bas valbise,coût eleve valbise,poids,Stock limite,Rural,Urbain
+armure,armure legere,Matelassee,5,"7,5",6,10,4,FALSE,TRUE,TRUE
+armure,armure legere,Cuir,10,15,12,20,5,FALSE,TRUE,TRUE
+armure,armure legere,Cuir Cloute,45,"67,5",54,90,"6,5",FALSE,FALSE,TRUE
+armure,armure intermediaire,Peaux,10,15,12,20,6,TRUE,TRUE,TRUE
+arme,arme courante de corps a corps,Gourdin,"0,1","0,15","0,12","0,2",1,FALSE,TRUE,FALSE
+arme,arme courante de corps a corps,Dague,2,3,"2,4",4,"0,5",TRUE,TRUE,TRUE
+arme,arme courante de corps a corps,Massue,"0,2","0,3","0,24","0,4",5,FALSE,TRUE,TRUE
+arme,arme courante de corps a corps,Hachette,5,"7,5",6,10,1,TRUE,TRUE,TRUE
+arme,arme courante de corps a corps,Marteau Leger,2,3,"2,4",4,1,FALSE,TRUE,TRUE
+arme,arme courante de corps a corps,Bâton,"0,2","0,3","0,24","0,4",2,FALSE,TRUE,TRUE
+arme,arme courante a distance,Arbalete legere,25,"37,5",30,50,"2,5",FALSE,FALSE,TRUE
+arme,arme courante a distance,Flechette,"0,05","0,075","0,06","0,1","0,1",FALSE,TRUE,TRUE
+arme,arme courante a distance,Arc court,25,"37,5",30,50,1,TRUE,TRUE,TRUE
+arme,arme courante a distance,Fronde,"0,1","0,15","0,12","0,2",0,FALSE,TRUE,TRUE
+arme,arme de guerre de corps a corps,Fouet,2,3,"2,4",4,"1,5",FALSE,TRUE,TRUE
+arme,arme de guerre a distance,Sarbacane,10,15,12,20,"0,5",FALSE,TRUE,FALSE
+arme,arme de guerre a distance,Arbalete de poing,75,"112,5",90,150,"1,5",FALSE,FALSE,TRUE
+arme,arme de guerre a distance,Arbalete lourde,50,75,60,100,9,FALSE,FALSE,FALSE
+arme,arme de guerre a distance,Arc long,50,75,60,100,1,TRUE,TRUE,TRUE
+equipement d'aventurier,munition,Fleches (20),1,"1,5","1,2",2,"0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,munition,Aiguilles de sarbacane (50),1,"1,5","1,2",2,"0,5",FALSE,TRUE,FALSE
+equipement d'aventurier,munition,Carreaux d'arbalete (20),1,"1,5","1,2",2,"0,75",TRUE,FALSE,TRUE
+equipement d'aventurier,munition,Billes de fronde (20),"0,04","0,06","0,048","0,08","0,75",FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Sac a dos,2,3,"2,4",4,"0,75",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Sac de couchage,1,"1,5","1,2",2,"0,75",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Couverture,"0,5","0,75","0,6",1,"0,75",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Palan,1,"1,5","1,2",2,"0,75",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Bouteille en verre,2,3,"2,4",4,"0,75",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Bougie,"0,01","0,015","0,012","0,02",0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,etui a carreaux,1,"1,5","1,2",2,"0,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,etui a cartes ou parchemins,1,"1,5","1,2",2,"0,5",FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Chaîne (3m),5,"7,5",6,10,5,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Coffre,5,"7,5",6,10,"12,5",FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Kit d'Escalade,25,"37,5",30,50,6,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Flasque ou Choppe,"0,02","0,03","0,024","0,04","0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,"Vêtements, voyage",2,3,"2,4",4,2,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Pied-de-biche,2,3,"2,4",4,"2,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Grappin,2,3,"2,4",4,2,TRUE,FALSE,TRUE
+equipement d'aventurier,equipement,Marteau,1,"1,5","1,2",2,"1,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Trousse de soin,5,"7,5",6,10,"1,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Sablier,25,"37,5",30,50,"0,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Piege a mâchoires,5,"7,5",6,10,"12,5",FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Encre (bouteille de 30 ml),10,15,12,20,0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Plume d'ecriture,"0,02","0,03","0,024","0,04",0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Cruche ou pichet,"0,02","0,03","0,024","0,04",2,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,echelle (3m),"0,1","0,15","0,12","0,2","12,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Lanterne sourde,10,15,12,20,1,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Lanterne a capote,5,"7,5",6,10,1,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Cadenas,10,15,12,20,"0,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Gamelle,"0,2","0,3","0,24","0,4","0,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Miroir en acier,5,"7,5",6,10,"0,25",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Papier (une feuille),"0,2","0,3","0,24","0,4",0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Parchemin (une feuille),"0,1","0,15","0,12","0,2",0,FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Pioche de mineur,2,3,"2,4",4,5,FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Piton,"0,5","0,75","0,6",1,"0,1",FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Perche (3 m),"0,05","0,075","0,06","0,1",3,FALSE,TRUE,TRUE
+equipement d'aventurier,equipement,Pot en fer,2,3,"2,4",4,5,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Sacoche,"0,5","0,75","0,6",1,"0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Carquois,1,"1,5","1,2",2,"0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Rations (1 jour),"0,5","0,75","0,6",1,1,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Corde en chanvre (15 m),1,"1,5","1,2",2,5,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Corde en soie (15 m),10,15,12,20,"2,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Sac,"0,01","0,015","0,012","0,02","0,25",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Pelle,2,3,"2,4",4,"2,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Sifflet,"0,05","0,075","0,06","0,1",0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Chevaliere,5,"7,5",6,10,0,FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,Longue-vue,1000,1500,1200,2000,"0,5",FALSE,FALSE,TRUE
+equipement d'aventurier,equipement,"Tente, deux places",2,3,"2,4",4,10,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Boite d'allume-feu,"0,5","0,75","0,6",1,"0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Torche,"0,01","0,015","0,012","0,02","0,5",TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Fiole (10 cl),1,"1,5","1,2",2,0,TRUE,TRUE,TRUE
+equipement d'aventurier,equipement,Gourde (pleine),"0,2","0,3","0,24","0,4","2,5",TRUE,TRUE,TRUE
+outil,outil general,Kit d'herboriste,5,"7,5",6,10,"1,5",FALSE,FALSE,TRUE
+outil,outil general,Outils de navigateur,25,"37,5",30,50,1,TRUE,TRUE,TRUE
+outil,outil d'artisan,Outils de cartographe	,15,"22,5",18,30,3,FALSE,FALSE,TRUE
+outil,outil d'artisan,Outils de bijoutier,25,"37,5",30,50,1,FALSE,FALSE,TRUE
+outil,outil d'artisan,Outils de bricoleur,50,75,60,100,5,FALSE,FALSE,TRUE
+equipement de valbise,equipement,Raquettes,2,3,"2,4",4,2,FALSE,TRUE,TRUE
+equipement de valbise,equipement,Crampons,2,3,"2,4",4,"0,125",FALSE,FALSE,TRUE
+equipement de valbise,equipement,"Vêtements, hiver",10,10,8,"13,33",4,FALSE,TRUE,TRUE
+equipement de valbise,equipement,Baies sec d'Alathorne,3,3,"2,4",4,"0,5",TRUE,TRUE,TRUE
+equipement de valbise,equipement,Canne a pêche,1,1,"0,8","1,33",2,FALSE,TRUE,TRUE
+equipement de valbise,equipement,Baies Juniper,2,2,"1,6","2,67","0,5",TRUE,TRUE,TRUE
+equipement de valbise,equipement,Racine de Kanishta,1,1,"0,8","1,33","0,5",TRUE,TRUE,TRUE
+equipement de valbise,equipement,Materiel de graveur (ivoire),10,10,8,"13,33","0,5",FALSE,TRUE,TRUE
+equipement de valbise,equipement,"Tente grand froid, deux places",30,30,24,40,"17,5",TRUE,TRUE,TRUE
+equipement de valbise,equipement,"Tente grand froid, six places",200,200,160,"266,67",35,TRUE,FALSE,TRUE
